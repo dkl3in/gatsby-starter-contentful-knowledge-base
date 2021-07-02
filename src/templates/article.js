@@ -24,6 +24,12 @@ const rendererOptions = ({ locale = 'en-US' }) => ({
           />
         );
       }
+      // check for video                                             
+      if (data.target.fields.file[locale].contentType.startsWith('video')) {
+        return (
+          <p>Video PLaceholder</p>
+        );
+      }
     },
   },
 });
